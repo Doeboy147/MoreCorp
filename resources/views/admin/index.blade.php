@@ -11,12 +11,7 @@
                         @include('includes.upload')
                         <button data-toggle="modal" data-target="#upload-product"
                                 class="btn btn-sm btn-outline-secondary">Upload</button>
-                        <button class="btn btn-sm btn-outline-secondary">Export</button>
                     </div>
-                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                        <span data-feather="calendar"></span>
-                        This week
-                    </button>
                 </div>
             </div>
             <div class="table-responsive">
@@ -29,6 +24,7 @@
                         <th>SKU</th>
                         <th>Price</th>
                         <th>Quantity</th>
+                        <th>Bids</th>
                         <th>Views</th>
                         <th>Option</th>
                     </tr>
@@ -41,6 +37,11 @@
                         <td>dolor</td>
                         <td>sit</td>
                         <td>200</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                             <i class="fa fa-eye"></i>
+                            </button>
+                        </td>
                         <td>200</td>
                         <td>
                             <a href="/edit-product" class="btn btn-primary btn-sm">
@@ -58,6 +59,11 @@
                         <td>adipiscing</td>
                         <td>elit</td>
                         <td>200</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </td>
                         <td>200</td>
                         <td>
                             <a href="#" class="btn btn-primary btn-sm">
@@ -75,6 +81,11 @@
                         <td>odio</td>
                         <td>Praesent</td>
                         <td>200</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                        </td>
                         <td>200</td>
                         <td>
                             <a href="#" class="btn btn-primary btn-sm">

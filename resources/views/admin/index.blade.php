@@ -4,16 +4,18 @@
         @include('includes.sidebar')
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div
-                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h2 class="h3">Manage Products</h2>
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
                         @include('includes.upload')
                         <button data-toggle="modal" data-target="#upload-product"
-                                class="btn btn-sm btn-outline-secondary">Upload</button>
+                                class="btn btn-sm btn-outline-secondary">Upload
+                        </button>
                     </div>
                 </div>
             </div>
+            @include('flash-message')
             <div class="table-responsive">
                 <table class="table table-striped border table-sm">
                     <thead class="table-primary">
@@ -38,8 +40,8 @@
                         <td>sit</td>
                         <td>200</td>
                         <td>
-                            <button class="btn btn-primary btn-sm">
-                             <i class="fa fa-eye"></i>
+                            <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#bids">
+                                <i class="fa fa-eye"></i>
                             </button>
                         </td>
                         <td>200</td>
@@ -47,7 +49,7 @@
                             <a href="/edit-product" class="btn btn-primary btn-sm">
                                 <i class="fa fa-pencil"></i>
                             </a>
-                            <a href="/delete" class="btn btn-danger btn-sm">
+                            <a href="/delete" data-toggle="modal" data-target="#delete-product" class="btn btn-danger btn-sm">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
@@ -101,4 +103,6 @@
             </div>
         </main>
     </div>
+    @include('includes.delete')
+    @include('includes.bids')
 @stop

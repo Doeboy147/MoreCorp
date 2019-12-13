@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="/add-product" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-row">
                         <div class="col">
@@ -41,6 +41,7 @@
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary btn-block">Save changes</button>
                 </div>
+                @csrf
             </form>
         </div>
     </div>
